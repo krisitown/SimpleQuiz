@@ -1,0 +1,23 @@
+<div>
+<%= form_for(@question) do |f| %>
+    <%= f.label :question %></br>
+    <%= f.text_field :question %></br>
+    
+    <%= f.label :answer1 %></br>
+    <%= f.text_field :answer1 %></br>
+    
+    <%= f.label :answer2 %></br>
+    <%= f.text_field :answer2 %></br>
+    
+    <%= f.label :answer3 %></br>
+    <%= f.text_field :answer3 %></br>
+    
+    <%= f.label :answer4 %></br>
+    <%= f.text_field :answer4 %></br>
+    
+    <%= f.label :correct_id %></br>
+    <%= f.text_field :correct_id %></br>
+    
+    <%= f.submit "Add question" %>
+    <% end %>
+</div>

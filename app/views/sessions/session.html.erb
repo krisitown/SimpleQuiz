@@ -1,0 +1,4 @@
+<h2>Question <%= session[:current_question] %>:</h2>
+<%= render Question.find(session[:current_question]) %>
+
+<%= button_to "Next", action: 'next' %>
