@@ -1,4 +1,8 @@
 <h2>Question <%= session[:current_question] %>:</h2>
 <%= render Question.find(session[:current_question]) %>
-
-<%= button_to "Next", action: 'next' %>
+<h2>Correct Answers: <%= session[:answers_right] %> </h2>
+<h3> <%= session[:clicked_answer] %> </br>
+    <%= session[:correct_answer] %>
+    <%= @current_question.correct_id %>
+    <%= params[:id] %>
+</h3>

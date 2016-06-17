@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     get 'questions/:id' => 'questions#show'
     get 'new' => 'questions#new'
     get 'start' => 'sessions#start'
-    post 'next' => 'sessions#next'
+    post 'answer/:id' => 'sessions#isAnswer'
+    
     
     resource :questions
   # Example of named route that can be invoked with purchase_url(id: product.id)
