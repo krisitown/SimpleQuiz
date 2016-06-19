@@ -9,9 +9,14 @@
     def isAnswer
         @current_question = Question.find(session[:current_question])
         if Integer(params[:id]) == @current_question.correct_id
-            session[:answers_right] += 1 
+            session[:answers_right] += 1
         end
         session[:current_question] += 1
-        render 'session'
+        if Question.all.size >= session[:current_question]
+            @current_question = Question.find(session[:current_question])
+            render 'session'
+        else
+            render 'finish'
+        end
     end
 end
