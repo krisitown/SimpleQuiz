@@ -1,0 +1,4 @@
+<li class="quiz">
+    <h2><%= link_to quiz.name, request.base_url + '/quiz/' + quiz.id.to_s + '/start', class: 'quiz-name' %></h2>
+    <h4 class="quiz-subject"><%= quiz.subject %></h4>
+</li>

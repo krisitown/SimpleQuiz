@@ -1,4 +1,5 @@
 <h2>Results:</h2>
-<h4>Correct <%= session[:answers_right] %> out of <%= Question.all.size %> </h4>
-<h4>Correct <%= (session[:answers_right].to_f/Question.all.size.to_f)*100 %>% </h4>
-<%= button_to "Try Again!", request.base_url + '/start' %> 
+<h4>Correct <%= session[:answers_right] %> out of <%= session[:questions].length %> </h4>
+<h4>Correct <%= (session[:answers_right].to_f/session[:questions].length.to_f)*100 %>% </h4>
+<%= button_to "Try Again!", request.base_url + '/quiz/' + session[:quiz_id].to_s + '/start' %> 
+<%= button_to "Choose another quiz", request.base_url, method: :get %>

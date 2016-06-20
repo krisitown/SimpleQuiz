@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     get 'questions/:id' => 'questions#show'
     get 'quiz/:id/add_question' => 'questions#new'
     get 'quiz/new' => 'quizzes#new'
-    get 'start' => 'sessions#start'
-    post 'start' => 'sessions#start'
+    get 'quiz/:id/start' => 'sessions#start'
+    post 'quiz/:id/start' => 'sessions#start'
     post 'answer/:id' => 'sessions#isAnswer'
     
     

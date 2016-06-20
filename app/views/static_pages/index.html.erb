@@ -1,4 +1,17 @@
-<h1>Welcome, start the quiz here:</h1>
+<h1>Welcome, choose a quiz:</h1>
 
-<%= link_to "Start!", 'start' %> 
+<div>
+<ul>
+    <%= render @quizes %>
+    
+</ul>
+    <%= will_paginate @quizes %>
+</div>
 <%= link_to "Create a new quiz" , 'quiz/new' %>
+
+
+<!-- 
+ <% @quizes.each do |quiz| %>
+       <li><%= link_to quiz.name, request.base_url + '/quiz/' + quiz.id.to_s + '/start' %></li> 
+        <% end %>
+        -->
